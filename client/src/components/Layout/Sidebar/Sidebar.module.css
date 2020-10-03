@@ -1,12 +1,19 @@
 @import "../../common.css";
 
 .sideBar {
-  width: 5%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 12%;
+  height: 100%;
+  float: left;
+  position: sticky;
+  top: 9vh;
+  z-index: 1;
+  background-color: white;
 }
 
 .sideBar td {
   position: relative;
-  left: -5px;
   text-align: center;
 }
 
@@ -17,8 +24,7 @@
 
 .label {
   position: relative;
-  top: -5px;
+  top: -12px;
   font-size: 11px;
-  margin-top: -10px;
   padding-bottom: 20px;
 }

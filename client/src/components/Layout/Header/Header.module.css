@@ -3,9 +3,14 @@
 .header {
   display: flex;
   height: 9vh;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   border-bottom: 1px solid var(--border-grey);
+  position: sticky;
+  z-index: 10;
+  top: 0;
 }
 
 .header div {

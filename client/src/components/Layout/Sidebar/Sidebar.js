@@ -48,7 +48,7 @@ export default function Sidebar() {
           </tr>
           <tr>
             <td className={style.label}>
-              Libray
+              Library
             </td>
           </tr>
         </tbody>
