@@ -5,10 +5,8 @@
   flex-grow: 1;
   width: 12%;
   height: 100%;
-  float: left;
   position: sticky;
   top: 9vh;
-  z-index: 1;
   background-color: white;
 }
 
