@@ -9,11 +9,13 @@ import AppsIcon from '@material-ui/icons/Apps';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
-export default function Header() {
+export default function Header(props) {
   return (
     <div className={style.header}>
       <div className={style.logo}>
-        <MenuIcon className={style.menuIcon}/>
+        <div className={style.menuIcon}>
+          <MenuIcon onClick={props.onClick}/>
+        </div>
         <YouTubeIcon/>
         Youtube
       </div>

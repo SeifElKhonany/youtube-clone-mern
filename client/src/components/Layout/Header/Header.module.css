@@ -55,5 +55,15 @@
 }
 
 .menuIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  width: 2%;
+  height: 10%;
+}
+
+.menuIcon:hover {
+  border-radius: 50%;
+  background-color: var(--border-grey);
 }
