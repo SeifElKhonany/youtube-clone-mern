@@ -2,8 +2,7 @@
 
 .sideBar {
   box-sizing: border-box;
-  flex-grow: 1;
-  width: 12%;
+  padding-right: 4px;
   height: 100%;
   position: sticky;
   top: 9vh;
