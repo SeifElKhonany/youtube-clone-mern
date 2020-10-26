@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Feed from '../../Feed/Feed';
-import Header from '../../Layout/Header/Header';
-import Sidebar from '../../Layout/Sidebar/Sidebar';
-import Drawer from '../../Layout/Drawer/Drawer';
+import Feed from '../../Feed';
+import Header from '../../Layout/Header';
+import Sidebar from '../../Layout/Sidebar';
+import Drawer from '../../Layout/Drawer';
 
-import style from './Home.module.css';
+import style from './Home.module.scss';
 
 export default function Home() {
   const [openDrawer, setOpenDrawer] = useState(false);

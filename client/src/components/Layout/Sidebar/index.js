@@ -4,7 +4,7 @@ import WhatshotIcon from '@material-ui/icons/Whatshot';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 
-import style from "./Sidebar.module.css";
+import style from "./Sidebar.module.scss";
 
 export default function Sidebar() {
   return (
@@ -14,41 +14,33 @@ export default function Sidebar() {
           <tr>
             <td className={style.icon}>
               <HomeIcon />
-            </td>
-          </tr>
-          <tr>
-            <td className={style.label}>
-              Home
+              <p className={style.label}>
+                Home
+              </p>
             </td>
           </tr>
           <tr>
             <td className={style.icon}>
               <WhatshotIcon />
-            </td>
-          </tr>
-          <tr>
-            <td className={style.label}>
-              Trending
+              <p className={style.label}>
+                Trending
+              </p>
             </td>
           </tr>
           <tr>
             <td className={style.icon}>
               <SubscriptionsIcon />
-            </td>
-          </tr>
-          <tr>
-            <td className={style.label}>
-              Subscriptions
+              <p className={style.label}>
+                Subscriptions
+              </p>
             </td>
           </tr>
           <tr>
             <td className={style.icon}>
               <VideoLibraryIcon />
-            </td>
-          </tr>
-          <tr>
-            <td className={style.label}>
-              Library
+              <p className={style.label}>
+                Library
+              </p>
             </td>
           </tr>
         </tbody>

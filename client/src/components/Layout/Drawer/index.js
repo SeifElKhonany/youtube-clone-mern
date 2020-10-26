@@ -9,7 +9,7 @@ import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import style from "./Drawer.module.css";
+import style from "./Drawer.module.scss";
 
 export default function Drawer() {
   return (

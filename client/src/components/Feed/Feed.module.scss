@@ -1,4 +1,4 @@
-@import "../common.css";
+@import "../common.scss";
 
 .root {
   width: 100%;
@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 10px;
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   background-color: var(--light-grey);
 }
@@ -44,10 +45,10 @@
   height: 100%;
   float: left;
   margin-right: 10px;
-}
 
-.image img {
-  width: 32px;
-  height: 40px;
-  border-radius: 50%;
+  img {
+    width: 32px;
+    height: 40px;
+    border-radius: 50%;
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Header.module.css';
+import style from './Header.module.scss';
 
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import MenuIcon from '@material-ui/icons/Menu';

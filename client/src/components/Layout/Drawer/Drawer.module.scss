@@ -1,7 +1,7 @@
-@import "../../common.css";
+@import "../../common.scss";
 
 .drawer {
-  width: 40%;
+  width: 20%;
   flex-grow: 1;
   height: 100vh;
   position: sticky;
@@ -9,12 +9,19 @@
   overflow-y: scroll;
 }
 
-.drawer table {
+.drawer {
+  table {
   width: 100%;
-}
+  }
+  td {
+    padding-bottom: 10px;
+  }
 
-td {
-  padding-bottom: 10px;
+  tr {
+    path {
+     fill: $mid-grey;
+    }
+  }
 }
 
 .section {

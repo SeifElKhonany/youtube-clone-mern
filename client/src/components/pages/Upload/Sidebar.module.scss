@@ -1,0 +1,57 @@
+@import "../../common.scss";
+
+.sideBar {
+  box-sizing: border-box;
+  width: 75px;
+  height: 100%;
+  position: relative;
+}
+
+.moveable {
+  box-sizing: border-box;
+  padding-top: 30px;
+  height: calc(100% - 180px);
+  overflow-y: scroll;
+  border: 1px solid $border-grey;
+}
+
+.moveable::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: $mid-grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:vertical:hover {
+  background: $dark-grey;
+}
+
+.fixed {
+  box-sizing: border-box;
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  border: 1px solid $border-grey;
+  background-color: white;
+}
+
+.icon {
+  height: 10px;
+  padding: 14px;
+  padding-left: 18px;
+
+  path {
+   fill: $mid-grey;
+  }
+}
+
+td {
+
+  text-align: center;
+  @include hover($light-grey);
+}

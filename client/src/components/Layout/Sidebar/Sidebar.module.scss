@@ -1,4 +1,4 @@
-@import "../../common.css";
+@import "../../common.scss";
 
 .sideBar {
   box-sizing: border-box;
@@ -7,21 +7,24 @@
   position: sticky;
   top: 9vh;
   background-color: white;
-}
 
-.sideBar td {
-  position: relative;
-  text-align: center;
+  td {
+    position: relative;
+    text-align: center;
+    @include hover($light-grey);
+  }
 }
 
 .icon {
   height: 10px;
   padding-top: 10px;
+
+  path {
+   fill: $mid-grey;
+  }
 }
 
 .label {
-  position: relative;
-  top: -12px;
   font-size: 11px;
   padding-bottom: 20px;
 }
