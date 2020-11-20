@@ -1,12 +1,15 @@
+// Colors
 $grey: #e6e6e6;
 $border-grey: rgba(0, 0, 0, 0.2);
 $text-grey: rgba(0, 0, 0, 0.3);
 $light-grey: rgba(0, 0, 0, 0.03);
 $dark-grey: rgba(0, 0, 0, 0.65);
 $mid-grey: rgba(0, 0, 0, 0.55);
-
 $red: #ff0000;
 $dark-red: #cc0000;
+
+// Sizes
+$header-height: 50px;
 
 @mixin hover($bg-color: inherit) {
   &:hover {
@@ -15,7 +18,7 @@ $dark-red: #cc0000;
   }
 }
 
-@mixin centerContent {
+@mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;

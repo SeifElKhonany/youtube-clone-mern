@@ -2,29 +2,23 @@
 
 .sideBar {
   box-sizing: border-box;
-  padding-right: 4px;
-  height: 100%;
-  position: sticky;
-  top: 9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70px;
+  position: fixed;
+  top: $header-height;
   background-color: white;
-
-  td {
-    position: relative;
-    text-align: center;
-    @include hover($light-grey);
-  }
 }
 
-.icon {
-  height: 10px;
-  padding-top: 10px;
-
+.item {
+  @include flexCenter;
+  flex-direction: column;
+  flex-basis: 80px;
+  font-size: 11px;
+  @include hover($light-grey);
   path {
    fill: $mid-grey;
   }
-}
-
-.label {
-  font-size: 11px;
-  padding-bottom: 20px;
 }
