@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <Header onClick={toggleDrawer}/>
+      <Header toggleDrawer={toggleDrawer}/>
       <div className={style.flex}>
         {openDrawer ? <Drawer /> : <Sidebar />}
         <Feed />

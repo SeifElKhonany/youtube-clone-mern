@@ -12,11 +12,11 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 export default function Header(props) {
   return (
     <div className={style.header}>
+      <div className={style.menuIcon}>
+        <MenuIcon onClick={props.toggleDrawer}/>
+      </div>
       <div className={style.logo}>
-        <div className={style.menuIcon}>
-          <MenuIcon onClick={props.onClick}/>
-        </div>
-        <YouTubeIcon/>
+        <YouTubeIcon className={style.logo}/>
         Youtube
       </div>
       <div className={style.search}>

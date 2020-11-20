@@ -14,3 +14,9 @@ $dark-red: #cc0000;
     cursor: pointer;
   }
 }
+
+@mixin centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

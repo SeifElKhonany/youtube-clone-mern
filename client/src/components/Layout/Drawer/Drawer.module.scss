@@ -8,32 +8,3 @@
   top: 9vh;
   overflow-y: scroll;
 }
-
-.drawer {
-  table {
-  width: 100%;
-  }
-  td {
-    padding-bottom: 10px;
-  }
-
-  tr {
-    path {
-     fill: $mid-grey;
-    }
-  }
-}
-
-.section {
-  padding-top: 10px;
-  border-bottom: 1px solid var(--border-grey);
-}
-
-.icon {
-  text-align: center;
-  padding-left: 10px;
-}
-
-.label {
-  padding-left: 20px;
-}
