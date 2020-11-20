@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 70px;
-  position: fixed;
+  flex-basis: 70px;
+  position: sticky;
   top: $header-height;
   background-color: white;
 }
@@ -15,8 +15,8 @@
 .item {
   @include flexCenter;
   flex-direction: column;
-  flex-basis: 80px;
-  font-size: 11px;
+  flex-basis: 5rem;
+  font-size: 0.7rem;
   @include hover($light-grey);
   path {
    fill: $mid-grey;

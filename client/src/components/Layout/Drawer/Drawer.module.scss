@@ -1,10 +1,30 @@
 @import "../../common.scss";
 
 .drawer {
-  width: 20%;
-  flex-grow: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 0 15rem;
   height: 100vh;
   position: sticky;
-  top: 9vh;
+  top: $header-height;
+  background-color: white;
   overflow-y: scroll;
+}
+
+.item {
+  @include flexCenter;
+  justify-content: flex-start;
+  height: 3rem;
+  padding-left: 2.5rem;
+  @include hover($light-grey);
+  path {
+   fill: $mid-grey;
+  }
+}
+
+.icon {
+  margin-right: 1rem;
 }

@@ -14,24 +14,42 @@ import style from "./Drawer.module.scss";
 export default function Drawer() {
   return (
     <div className={style.drawer}>
-    <HomeIcon />
-    Home
-    <WhatshotIcon />
-    Trending
-    <SubscriptionsIcon />
-    Subscriptions
-    <VideoLibraryIcon />
-    Library
-    <HistoryIcon />
-    History
-    <OndemandVideoIcon />
-    Your videos
-    <WatchLaterIcon />
-    Watch later
-    <PlaylistPlayIcon />
-    Playlist
-    <ExpandMoreIcon />
-    Show more
+      <div className={style.item}>
+        <HomeIcon className={style.icon}/>
+        Home
+      </div>
+      <div className={style.item}>
+      <WhatshotIcon className={style.icon}/>
+      Trending
+      </div>
+      <div className={style.item}>
+      <SubscriptionsIcon className={style.icon}/>
+      Subscriptions
+      </div>
+      <div className={style.item}>
+      <VideoLibraryIcon className={style.icon}/>
+      Library
+      </div>
+      <div className={style.item}>
+      <HistoryIcon className={style.icon}/>
+      History
+      </div>
+      <div className={style.item}>
+      <OndemandVideoIcon className={style.icon}/>
+      Your videos
+      </div>
+      <div className={style.item}>
+      <WatchLaterIcon className={style.icon}/>
+      Watch later
+      </div>
+      <div className={style.item}>
+      <PlaylistPlayIcon className={style.icon}/>
+      Playlist
+      </div>
+      <div className={style.item}>
+      <ExpandMoreIcon className={style.icon}/>
+      Show more
+      </div>
     </div>
   );
 }
