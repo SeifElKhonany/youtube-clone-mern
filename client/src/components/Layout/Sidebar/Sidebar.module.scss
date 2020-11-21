@@ -17,7 +17,7 @@
   flex-direction: column;
   flex-basis: 5rem;
   font-size: 0.7rem;
-  @include hover($light-grey);
+  @include buttonBehavior($light-grey);
   path {
    fill: $mid-grey;
   }

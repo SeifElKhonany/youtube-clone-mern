@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar';
+import Header from '../../Upload/Header';
+import Sidebar from '../../Upload/Sidebar';
 import Drawer from '../../Layout/Drawer';
+import UploadVideo from '../../Upload/UploadVideo';
 
 import style from './Upload.module.scss';
 
@@ -14,9 +15,13 @@ export default function Upload() {
 
   return (
     <div>
-      <Header onClick={toggleDrawer}/>
+      <Header toggleDrawer={toggleDrawer}/>
       <div className={style.flex}>
         {openDrawer ? <Drawer /> : <Sidebar />}
+        <div>
+          <h1 className={style.header}>Channel Videos</h1>
+          <UploadVideo />
+        </div>
       </div>
     </div>
   );

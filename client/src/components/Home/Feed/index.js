@@ -1,5 +1,5 @@
 import React from 'react';
-import FeedVideo from './FeedVideo';
+import FeedVideo from '../FeedVideo';
 
 import style from './Feed.module.scss';
 

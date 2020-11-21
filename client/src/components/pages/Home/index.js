@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Feed from '../../Feed';
+import Feed from '../../Home/Feed';
 import Header from '../../Layout/Header';
 import Sidebar from '../../Layout/Sidebar';
 import Drawer from '../../Layout/Drawer';

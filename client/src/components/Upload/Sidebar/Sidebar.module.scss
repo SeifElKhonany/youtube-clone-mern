@@ -51,7 +51,6 @@
 }
 
 td {
-
   text-align: center;
-  @include hover($light-grey);
+  @include buttonBehavior($light-grey);
 }

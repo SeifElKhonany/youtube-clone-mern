@@ -19,7 +19,7 @@
   justify-content: flex-start;
   height: 3rem;
   padding-left: 2.5rem;
-  @include hover($light-grey);
+  @include buttonBehavior($light-grey);
   path {
    fill: $mid-grey;
   }

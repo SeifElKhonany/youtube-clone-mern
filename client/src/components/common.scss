@@ -3,18 +3,30 @@ $grey: #e6e6e6;
 $border-grey: rgba(0, 0, 0, 0.2);
 $text-grey: rgba(0, 0, 0, 0.3);
 $light-grey: rgba(0, 0, 0, 0.05);
-$dark-grey: rgba(0, 0, 0, 0.65);
 $mid-grey: rgba(0, 0, 0, 0.55);
+$dark-grey: rgba(0, 0, 0, 0.65);
 $red: #ff0000;
 $dark-red: #cc0000;
 
 // Sizes
-$header-height: 50px;
+$header-height: 60px;
 
-@mixin hover($bg-color: inherit) {
+@mixin iconButton {
+  background-color: inherit;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin buttonBehavior($hover-color: inherit, $click-color: rgba(0, 0, 0, 0.2)) {
+  transition: background-color 0.2s;
   &:hover {
-    background-color: $bg-color;
     cursor: pointer;
+    background-color: $hover-color;
+  }
+  &:active {
+    background-color: $click-color;
   }
 }
 
@@ -22,4 +34,8 @@ $header-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin border {
+  border: 1px solid green;
 }

@@ -23,7 +23,7 @@
   flex: 0 0 40px;
   height: 40px;
   border-radius: 50%;
-  @include hover($border-grey);
+  @include buttonBehavior;
   @include flexCenter;
 }
 
@@ -45,11 +45,11 @@
   padding: 0 1rem;
   border: 1px solid $border-grey;
   margin-left: 8rem;
-}
 
-.searchBar:focus {
-  outline-width: 0;
-  border: 1px solid blue;
+  &:focus {
+    outline-width: 0;
+    border: 1px solid blue;
+  }
 }
 
 .searchIcon {
@@ -72,10 +72,9 @@
   margin-right: 20px;
   text-align: center;
   border-radius: 50%;
-  @include hover;
+  @include buttonBehavior;
 
   path {
    fill: $dark-grey;
   }
-
 }
