@@ -11,22 +11,42 @@
     margin-right: 1rem;
   }
   p {
-    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  h5 {
+    display: inline;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  h6 {
+    color: $text-grey;
+    display: inline;
+    font-size: 0.8rem;
+    font-weight: normal;
   }
 }
 
 .actions {
-  margin: 0;
-  padding: 0;
   width: 20%;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: $mid-grey;
-  font-weight: 500;
-  font-size: 0.9rem;
-  path {
-    color: $mid-grey;
+  color: $action-color;
+
+  button {
+    @include actionText;
+  }
+  button:nth-child(1), button:nth-child(2){
+    font-size: 0.75rem;
+    padding: 0.2rem;
+    outline: none;
+    @include iconButton;
+    svg {
+      @include buttonBehavior;
+    }
   }
 }

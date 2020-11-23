@@ -1,29 +1,49 @@
 // Colors
 $grey: #e6e6e6;
 $border-grey: rgba(0, 0, 0, 0.2);
-$text-grey: rgba(0, 0, 0, 0.3);
+$text-grey: rgba(0, 0, 0, 0.7);
 $light-grey: rgba(0, 0, 0, 0.05);
 $mid-grey: rgba(0, 0, 0, 0.55);
 $dark-grey: rgba(0, 0, 0, 0.65);
+$action-color: rgba(0, 0, 0, 0.5);
 $red: #ff0000;
 $dark-red: #cc0000;
+$click-color: rgba(0, 0, 0, 0.2);
 
 // Sizes
 $header-height: 60px;
 
+
+// Mixins
+
+@mixin actionText {
+  font-weight: 700;
+  color: $action-color;
+}
+
 @mixin iconButton {
   background-color: inherit;
   border: none;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
+
+  svg {
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    path {
+      color: $action-color
+    }
+  }
 }
 
-@mixin buttonBehavior($hover-color: inherit, $click-color: rgba(0, 0, 0, 0.2)) {
+@mixin buttonBehavior($hover-color: white, $click-color: $click-color) {
+  background-color: white;
   transition: background-color 0.2s;
+  border: none;
   &:hover {
-    cursor: pointer;
     background-color: $hover-color;
+    cursor: pointer;
   }
   &:active {
     background-color: $click-color;
@@ -36,6 +56,6 @@ $header-height: 60px;
   align-items: center;
 }
 
-@mixin border {
+@mixin b {
   border: 1px solid green;
 }

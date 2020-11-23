@@ -31,36 +31,64 @@
 
 .videoHeader {
   margin: 1rem 0;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .videoFooter {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 1rem;
   height: 30px;
   border-bottom: 1px solid $border-grey;
+
+  div:first-child {
+    flex: 2;
+  }
+
+  h2 {
+    color: $text-grey;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
 }
 
 .videoActions {
+  flex: 1;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @include flexCenter;
+  justify-content: flex-start;
 
   button {
     padding: 0.5rem;
+    font-size: 0.95rem;
     @include iconButton;
-
+    @include actionText;
+    &:hover {
+      cursor: pointer;
+    }
     svg {
-      margin-right: 0.5rem;
       @include buttonBehavior;
-      path {
-        color: $mid-grey
-      }
     }
   }
 }
 
-.commentSection {
+.commentsHeader {
+  height: 50px;
+  @include flexCenter;
+  justify-content: flex-start;
+
   h3 {
     display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-right: 2rem;
+  }
+
+  button {
+    outline: none;
+    @include iconButton;
+    @include actionText;
   }
 }

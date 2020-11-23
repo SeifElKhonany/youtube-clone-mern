@@ -3,6 +3,8 @@ import Header from '../../Layout/Header';
 import Drawer from '../../Layout/Drawer';
 import Comment from '../../Video/Comment';
 
+import Button from '@material-ui/core/Button';
+import Popover from '@material-ui/core/Popover';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import ReplyIcon from '@material-ui/icons/Reply';
@@ -30,7 +32,9 @@ export default function Video() {
           <h1 className={style.videoHeader}>Medium Debbie | This Past Weekend w/ Theo Von #308</h1>
           <div className={style.videoFooter}>
             <div>
-              51,258 views • Nov 20, 2020
+              <h2>
+                51,258 views • Nov 20, 2020
+              </h2>
             </div>
             <div className={style.videoActions}>
               <button>
@@ -43,11 +47,11 @@ export default function Video() {
               </button>
               <button>
                 <ReplyIcon />
-                Share
+                SHARE
               </button>
               <button>
                 <PlaylistAddIcon />
-                Save
+                SAVE
               </button>
               <button>
                 <MoreHorizIcon />
@@ -55,9 +59,15 @@ export default function Video() {
             </div>
           </div>
           <div className={style.commentSection}>
-            <h3>2,126 Comments</h3>
-            <SortIcon />
-            Sort by
+            <div className={style.commentsHeader}>
+              <h3>2,126 Comments</h3>
+              <Button
+              variant="text"
+              startIcon={<SortIcon />}
+              >
+              SORT BY
+              </Button>
+            </div>
             <Comment />
             <Comment />
             <Comment />
