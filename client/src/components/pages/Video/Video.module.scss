@@ -74,6 +74,86 @@
   }
 }
 
+.description {
+  padding: 1rem 0;
+  border-bottom: 1px solid $border-grey;
+  height: auto;
+
+  &Header {
+    @include flexCenter;
+    height: 60px;
+    padding-bottom: 1rem;
+  }
+
+  &Content {
+    padding-left: 4rem;
+    padding-right: 20rem;
+    box-sizing: border-box;
+    p {
+      box-sizing: border-box;
+      height: 95px;
+      overflow: hidden;
+
+      &.showMore {
+        height: auto;
+      }
+    }
+
+    button {
+      border: none;
+      font-weight: 700;
+      color: $text-grey;
+      background-color: inherit;
+      margin-top: 1rem;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+.channelInfo {
+  @include flexCenter;
+
+  div:nth-child(2) {
+    @include flexCenter;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $text-grey;
+  }
+}
+
+.subscribe {
+  @include flexCenter;
+  justify-content: flex-end;
+
+  button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 2px;
+    background-color: #c00;
+    font-weight: bold;
+    color: white;
+    outline: 0;
+    cursor: pointer;
+  }
+}
+
 .commentsHeader {
   height: 50px;
   @include flexCenter;
