@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Header from '../../Layout/Header';
 import Drawer from '../../Layout/Drawer';
 import Comment from '../../Video/Comment';
+import MiniVideo from '../../MiniVideo';
 
 import Button from '@material-ui/core/Button';
-import Popover from '@material-ui/core/Popover';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import ReplyIcon from '@material-ui/icons/Reply';
@@ -30,7 +30,7 @@ export default function Video() {
       {openDrawer ? <Drawer /> : null}
       <div className={style.container}>
         <div className={style.left}>
-          <div className={style.video}></div>
+          <img src={img} alt="Video" className={style.video} />
           <h1 className={style.videoHeader}>Medium Debbie | This Past Weekend w/ Theo Von #308</h1>
           <div className={style.videoFooter}>
             <div>
@@ -117,6 +117,21 @@ export default function Video() {
           </div>
         </div>
         <div className={style.right}>
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
+          <MiniVideo />
         </div>
       </div>
     </div>

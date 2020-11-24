@@ -7,7 +7,7 @@ export default function FeedVideo() {
 
   return (
     <div className={style.video}>
-        <div className={style.thumbnail}></div>
+        <img src={img} alt="Video" className={style.thumbnail}/>
         <div className={style.videoInfo}>
           <div className={style.image}>
             <img src={img} alt="Channel"/>
