@@ -1,0 +1,64 @@
+@import "../../common.scss";
+
+.modal {
+  background-color: $mid-grey;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.drawer {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 15%;
+  background-color: white;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+    background: white;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:vertical:hover {
+    background: $dark-grey;
+  }
+}
+
+.title {
+  height: 3rem;
+  @include flexCenter;
+  padding-left: 1.4rem;
+  path {
+   fill: $mid-grey;
+  }
+}
+
+.logo {
+  @include flexCenter;
+  justify-content: flex-start;
+  font-weight: bold;
+  margin-left: 1rem;
+  path {
+   fill: red;
+  }
+}
+
+.item {
+  @include flexCenter;
+  justify-content: flex-start;
+  height: 3rem;
+  padding-left: 1.4rem;
+  @include buttonBehavior($light-grey);
+  path {
+   fill: $mid-grey;
+  }
+}
+
+.icon {
+  margin-right: 1rem;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../Layout/Header';
-import Drawer from '../../Layout/Drawer';
+import Drawer from '../../Video/Drawer';
 import Comment from '../../Video/Comment';
 import MiniVideo from '../../MiniVideo';
 
@@ -26,8 +26,7 @@ export default function Video() {
   return (
     <>
     <Header toggleDrawer={toggleDrawer}/>
-    <div className={style.flex}>
-      {openDrawer ? <Drawer /> : null}
+    {openDrawer ? <Drawer toggleDrawer={toggleDrawer}/> : null}
       <div className={style.container}>
         <div className={style.left}>
           <img src={img} alt="Video" className={style.video} />
@@ -134,7 +133,6 @@ export default function Video() {
           <MiniVideo />
         </div>
       </div>
-    </div>
     </>
   );
 }

@@ -6,9 +6,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  flex-basis: 70px;
+  flex-basis: 80px;
   position: sticky;
   top: $header-height;
+  left: 0;
+  height: 100vh;
   background-color: white;
 }
 

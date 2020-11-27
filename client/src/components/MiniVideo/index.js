@@ -16,6 +16,7 @@ export default function MiniVideo() {
                 2M views . 2 years ago
               </p>
             </div>
+            <div></div>
         </div>
       </div>
   );

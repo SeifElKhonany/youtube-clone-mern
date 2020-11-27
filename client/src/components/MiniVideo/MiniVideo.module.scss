@@ -17,6 +17,7 @@
   box-sizing: border-box;
   @include flexCenter;
   flex-direction: column;
+  margin-left: 0.25rem;
   h1 {
     font-size: 0.9rem;
   }
