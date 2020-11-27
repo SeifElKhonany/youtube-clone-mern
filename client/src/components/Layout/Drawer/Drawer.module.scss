@@ -16,10 +16,11 @@
 
 .item {
   @include flexCenter;
+  @include clickTrans($light-grey);
   justify-content: flex-start;
+  font-size: 0.9rem;
   height: 3rem;
-  padding-left: 2.5rem;
-  @include buttonBehavior($light-grey);
+  padding-left: 3rem;
   path {
    fill: $mid-grey;
   }

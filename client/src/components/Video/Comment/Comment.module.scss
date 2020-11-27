@@ -46,7 +46,7 @@
     outline: none;
     @include iconButton;
     svg {
-      @include buttonBehavior;
+      @include clickTrans;
     }
   }
 }

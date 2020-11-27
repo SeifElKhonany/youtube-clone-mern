@@ -25,7 +25,7 @@
   flex: 0 0 40px;
   height: 40px;
   border-radius: 50%;
-  @include buttonBehavior;
+  @include clickTrans;
   @include flexCenter;
 }
 
@@ -74,7 +74,7 @@
   margin-right: 20px;
   text-align: center;
   border-radius: 50%;
-  @include buttonBehavior;
+  @include clickTrans;
 
   path {
     fill: $dark-grey;
@@ -88,7 +88,7 @@
   padding: 8px;
   font-weight: bold;
   color: $dark-grey;
-  @include buttonBehavior;
+  @include clickTrans;
   path {
     fill: $dark-red;
   }

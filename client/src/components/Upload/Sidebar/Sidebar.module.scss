@@ -52,5 +52,5 @@
 
 td {
   text-align: center;
-  @include buttonBehavior($light-grey);
+  @include clickTrans($light-grey);
 }

@@ -26,10 +26,10 @@ export default function Header(props) {
         </div>
       </div>
       <div className={style.iconBar}>
-        <VideoCallIcon className={style.icon}/>
-        <AppsIcon className={style.icon}/>
-        <NotificationsIcon className={style.icon}/>
-        <AccountCircleIcon className={style.icon}/>
+        <button className={style.iconButton}><VideoCallIcon /></button>
+        <button className={style.iconButton}><AppsIcon /></button>
+        <button className={style.iconButton}><NotificationsIcon /></button>
+        <button className={style.iconButton}><AccountCircleIcon /></button>
       </div>
     </div>
   );

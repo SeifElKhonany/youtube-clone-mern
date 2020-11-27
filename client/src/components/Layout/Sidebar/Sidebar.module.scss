@@ -19,7 +19,7 @@
   flex-direction: column;
   flex-basis: 5rem;
   font-size: 0.7rem;
-  @include buttonBehavior($light-grey);
+  @include clickTrans($light-grey);
   path {
    fill: $mid-grey;
   }

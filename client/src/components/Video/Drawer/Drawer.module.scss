@@ -53,7 +53,7 @@
   justify-content: flex-start;
   height: 3rem;
   padding-left: 1.4rem;
-  @include buttonBehavior($light-grey);
+  @include clickTrans($light-grey);
   path {
    fill: $mid-grey;
   }

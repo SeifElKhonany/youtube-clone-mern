@@ -68,7 +68,7 @@
       cursor: pointer;
     }
     svg {
-      @include buttonBehavior;
+      @include clickTrans;
     }
   }
 }

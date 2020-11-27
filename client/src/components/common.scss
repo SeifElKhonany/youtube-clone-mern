@@ -29,7 +29,6 @@ $header-height: 60px;
   align-items: center;
 
   svg {
-    margin-right: 0.5rem;
     border-radius: 50%;
     path {
       color: $action-color
@@ -37,13 +36,13 @@ $header-height: 60px;
   }
 }
 
-@mixin buttonBehavior($hover-color: white, $click-color: $click-color) {
+@mixin clickTrans($hover-color: white, $click-color: $click-color) {
   background-color: white;
   transition: background-color 0.2s;
   border: none;
+  cursor: pointer;
   &:hover {
     background-color: $hover-color;
-    cursor: pointer;
   }
   &:active {
     background-color: $click-color;
