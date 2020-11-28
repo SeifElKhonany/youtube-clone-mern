@@ -10,78 +10,82 @@ import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import MenuIcon from '@material-ui/icons/Menu';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+
 
 import style from "./Drawer.module.scss";
 
 export default function Drawer({ toggleDrawer }) {
   return (
-    <div className={style.modal}>
-      <div className={style.drawer}>
-        <div className={style.title}>
-          <MenuIcon onClick={toggleDrawer} className={style.menuIcon}/>
-          <div className={style.logo}>
-            <YouTubeIcon className={style.logo}/>
-            Youtube
+      <div className={style.modal}>
+        <ClickAwayListener onClickAway={toggleDrawer}>
+          <div className={style.drawer}>
+            <div className={style.title}>
+              <MenuIcon onClick={toggleDrawer} className={style.menuIcon}/>
+              <div className={style.logo}>
+                <YouTubeIcon className={style.logo}/>
+                Youtube
+              </div>
+            </div>
+            <div className={style.item}>
+              <HomeIcon className={style.icon}/>
+              Home
+            </div>
+            <div className={style.item}>
+            <WhatshotIcon className={style.icon}/>
+            Trending
+            </div>
+            <div className={style.item}>
+            <SubscriptionsIcon className={style.icon}/>
+            Subscriptions
+            </div>
+            <div className={style.item}>
+            <VideoLibraryIcon className={style.icon}/>
+            Library
+            </div>
+            <div className={style.item}>
+            <HistoryIcon className={style.icon}/>
+            History
+            </div>
+            <div className={style.item}>
+            <OndemandVideoIcon className={style.icon}/>
+            Your videos
+            </div>
+            <div className={style.item}>
+            <WatchLaterIcon className={style.icon}/>
+            Watch later
+            </div>
+            <div className={style.item}>
+            <PlaylistPlayIcon className={style.icon}/>
+            Playlist
+            </div>
+            <div className={style.item}>
+            <ExpandMoreIcon className={style.icon}/>
+            Show more
+            </div>
+            <div className={style.item}>
+            <ExpandMoreIcon className={style.icon}/>
+            Show more
+            </div>
+            <div className={style.item}>
+            <ExpandMoreIcon className={style.icon}/>
+            Show more
+            </div>
+            <div className={style.item}>
+            <ExpandMoreIcon className={style.icon}/>
+            Show more
+            </div>
+            <div className={style.item}>
+            <ExpandMoreIcon className={style.icon}/>
+            Show more
+            </div>
+            <div className={style.item}>
+            <ExpandMoreIcon className={style.icon}/>
+            Show more
+            </div>
           </div>
-        </div>
-        <div className={style.item}>
-          <HomeIcon className={style.icon}/>
-          Home
-        </div>
-        <div className={style.item}>
-        <WhatshotIcon className={style.icon}/>
-        Trending
-        </div>
-        <div className={style.item}>
-        <SubscriptionsIcon className={style.icon}/>
-        Subscriptions
-        </div>
-        <div className={style.item}>
-        <VideoLibraryIcon className={style.icon}/>
-        Library
-        </div>
-        <div className={style.item}>
-        <HistoryIcon className={style.icon}/>
-        History
-        </div>
-        <div className={style.item}>
-        <OndemandVideoIcon className={style.icon}/>
-        Your videos
-        </div>
-        <div className={style.item}>
-        <WatchLaterIcon className={style.icon}/>
-        Watch later
-        </div>
-        <div className={style.item}>
-        <PlaylistPlayIcon className={style.icon}/>
-        Playlist
-        </div>
-        <div className={style.item}>
-        <ExpandMoreIcon className={style.icon}/>
-        Show more
-        </div>
-        <div className={style.item}>
-        <ExpandMoreIcon className={style.icon}/>
-        Show more
-        </div>
-        <div className={style.item}>
-        <ExpandMoreIcon className={style.icon}/>
-        Show more
-        </div>
-        <div className={style.item}>
-        <ExpandMoreIcon className={style.icon}/>
-        Show more
-        </div>
-        <div className={style.item}>
-        <ExpandMoreIcon className={style.icon}/>
-        Show more
-        </div>
-        <div className={style.item}>
-        <ExpandMoreIcon className={style.icon}/>
-        Show more
-        </div>
+        </ClickAwayListener>
       </div>
-    </div>
   );
 }
 
