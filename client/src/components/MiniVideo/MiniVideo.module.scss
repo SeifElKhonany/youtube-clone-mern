@@ -16,6 +16,7 @@
 .videoInfo {
   box-sizing: border-box;
   @include flexCenter;
+  justify-content: flex-start;
   flex-direction: column;
   margin-left: 0.25rem;
   h1 {
