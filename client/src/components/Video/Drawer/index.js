@@ -12,12 +12,12 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import MenuIcon from '@material-ui/icons/Menu';
 import Slide from '@material-ui/core/Slide';
 
-import Modal from '../../Modal';
+import Modal from '../../Layout/Modal';
 
 
 import style from "./Drawer.module.scss";
 
-export default function Drawer({ openDrawer, toggleDrawer }) {
+export default function Drawer({ toggleDrawer }) {
   return (
     <Modal toggle={toggleDrawer}>
       <Slide in={true} direction="right">

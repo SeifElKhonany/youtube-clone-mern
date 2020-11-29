@@ -3,6 +3,7 @@ import Header from '../../Layout/Header';
 import Drawer from '../../Video/Drawer';
 import Comment from '../../Video/Comment';
 import MiniVideo from '../../MiniVideo';
+import Menu from '../../Menu';
 
 import Button from '@material-ui/core/Button';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
@@ -12,21 +13,31 @@ import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import SortIcon from '@material-ui/icons/Sort';
 
-import img from '../../../assets/img.jpg';
+import img from '../../../assets/img.png';
 import style from './Video.module.scss';
 
 export default function Video() {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [openSaveTo, setOpenSaveTo] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
   }
 
+  const toggleSaveTo = () => {
+    setOpenSaveTo(!openSaveTo);
+  }
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  }
+
   return (
     <>
     <Header toggleDrawer={toggleDrawer}/>
     {openDrawer ? <Drawer toggleDrawer={toggleDrawer}/> : null}
+    {openSaveTo ? <Menu toggleMenu={toggleSaveTo}/> : null}
       <div className={style.container}>
         <div className={style.left}>
           <img src={img} alt="Video" className={style.video} />
@@ -50,7 +61,7 @@ export default function Video() {
                 <ReplyIcon />
                 SHARE
               </button>
-              <button>
+              <button onClick={toggleSaveTo}>
                 <PlaylistAddIcon />
                 SAVE
               </button>
@@ -96,7 +107,7 @@ export default function Video() {
 
               Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable. Trees delay fancy noise manor do as an small. Felicity now law securing breeding likewise extended and. Roused either who favour why ham.
             </p>
-            <button onClick={() => setShowMore(!showMore)}>SHOW { showMore ? "LESS" : "MORE"}</button>
+            <button onClick={toggleShowMore}>SHOW { showMore ? "LESS" : "MORE"}</button>
           </div>
           </div>
           <div className={style.commentSection}>

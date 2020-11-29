@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
-import img from '../../../assets/img.jpg';
+import img from '../../../assets/img.png';
 import style from './Comment.module.scss';
 
 export default function Comment() {

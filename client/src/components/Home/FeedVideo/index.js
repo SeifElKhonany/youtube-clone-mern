@@ -1,6 +1,6 @@
 import React from 'react';
 
-import img from '../../../assets/img.jpg';
+import img from '../../../assets/img.png';
 import style from './FeedVideo.module.scss';
 
 export default function FeedVideo() {
