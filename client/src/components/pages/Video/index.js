@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../Layout/Header';
 import Drawer from '../../Video/Drawer';
 import Comment from '../../Video/Comment';
+import CommentForm from '../../Video/CommentForm';
 import MiniVideo from '../../MiniVideo';
 import SaveToMenu from '../../Layout/Menus/SaveToMenu';
 import SortCommentsMenu from '../../Layout/Menus/SortCommentsMenu';
@@ -130,6 +131,7 @@ export default function Video() {
                 {openSortComments ? <SortCommentsMenu toggleMenu={toggleSortComments} openMenu={openSortComments}/> : null}
               </div>
             </div>
+            <CommentForm />
             <Comment />
             <Comment />
             <Comment />
