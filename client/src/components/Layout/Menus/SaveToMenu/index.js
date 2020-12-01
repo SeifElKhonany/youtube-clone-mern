@@ -6,9 +6,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import LockIcon from '@material-ui/icons/Lock';
 import AddIcon from '@material-ui/icons/Add';
 
-import Modal from '../Layout/Modal';
+import Modal from '../../Modal';
 
-import style from "./Menu.module.scss";
+import style from "./SaveToMenu.module.scss";
 
 export default function Menu({ openMenu, toggleMenu }) {
   return (

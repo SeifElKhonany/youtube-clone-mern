@@ -30,8 +30,8 @@
 
 .menuIcon {
   border-radius: 50%;
-  outline: none;
   padding: 0.5rem;
+  @include button;
   @include clickTrans;
 }
 

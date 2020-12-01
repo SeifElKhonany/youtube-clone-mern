@@ -15,6 +15,13 @@ $header-height: 60px;
 
 
 // Mixins
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin actionText {
   font-weight: 700;
   color: $action-color;
@@ -51,10 +58,10 @@ $header-height: 60px;
   }
 }
 
-@mixin button($icon-color: $action-color, $round: true) {
+@mixin button($icon-color: $action-color) {
   display: inline-flex;
   align-items: center;
-  background-color: inherit;
+  background-color: initial;
   border: none;
   outline: none;
   cursor: pointer;
@@ -64,22 +71,12 @@ $header-height: 60px;
     &.icon {
       flex: 2;
       @include colorIconChildren($icon-color);
-      @if $round {
-        border-radius: 50%;
-      }
     }
     &.text {
       justify-content: flex-start;
       flex: 5;
-      text-align: left;
     }
   }
-}
-
-@mixin flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @mixin b {

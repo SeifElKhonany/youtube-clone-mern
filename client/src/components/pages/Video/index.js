@@ -3,7 +3,8 @@ import Header from '../../Layout/Header';
 import Drawer from '../../Video/Drawer';
 import Comment from '../../Video/Comment';
 import MiniVideo from '../../MiniVideo';
-import Menu from '../../Menu';
+import SaveToMenu from '../../Layout/Menus/SaveToMenu';
+import SortCommentsMenu from '../../Layout/Menus/SortCommentsMenu';
 
 import Button from '@material-ui/core/Button';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
@@ -17,9 +18,14 @@ import img from '../../../assets/img.png';
 import style from './Video.module.scss';
 
 export default function Video() {
+  const [showMore, setShowMore] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openSaveTo, setOpenSaveTo] = useState(false);
-  const [showMore, setShowMore] = useState(false);
+  const [openSortComments, setOpenSortComments] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  }
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -29,15 +35,15 @@ export default function Video() {
     setOpenSaveTo(!openSaveTo);
   }
 
-  const toggleShowMore = () => {
-    setShowMore(!showMore);
+  const toggleSortComments = () => {
+    setOpenSortComments(!openSortComments);
   }
 
   return (
     <>
     <Header toggleDrawer={toggleDrawer}/>
     {openDrawer ? <Drawer toggleDrawer={toggleDrawer}/> : null}
-    {openSaveTo ? <Menu toggleMenu={toggleSaveTo}/> : null}
+    {openSaveTo ? <SaveToMenu toggleMenu={toggleSaveTo}/> : null}
       <div className={style.container}>
         <div className={style.left}>
           <img src={img} alt="Video" className={style.video} />
@@ -49,24 +55,24 @@ export default function Video() {
               </h2>
             </div>
             <div className={style.videoActions}>
-              <button>
-                <ThumbUpIcon />
-                1.9k
+              <button className={style.actionButton}>
+                <span className={style.icon}><ThumbUpIcon /></span>
+                <span className={style.text}>1.9k</span>
               </button>
-              <button>
-                <ThumbDownIcon />
-                21
+              <button className={style.actionButton}>
+                <span className={style.icon}><ThumbDownIcon /></span>
+                <span className={style.text}>21</span>
               </button>
-              <button>
-                <ReplyIcon />
-                SHARE
+              <button className={style.actionButton}>
+                <span className={style.icon}><ReplyIcon /></span>
+                <span className={style.text}>SHARE</span>
               </button>
-              <button onClick={toggleSaveTo}>
-                <PlaylistAddIcon />
-                SAVE
+              <button className={style.actionButton} onClick={toggleSaveTo}>
+                <span className={style.icon}><PlaylistAddIcon /></span>
+                <span className={style.text}>SAVE</span>
               </button>
-              <button>
-                <MoreHorizIcon />
+              <button className={style.actionButton}>
+                <span className={style.icon}><MoreHorizIcon /></span>
               </button>
             </div>
           </div>
@@ -113,12 +119,16 @@ export default function Video() {
           <div className={style.commentSection}>
             <div className={style.commentsHeader}>
               <h3>2,126 Comments</h3>
-              <Button
-              variant="text"
-              startIcon={<SortIcon />}
-              >
-              SORT BY
-              </Button>
+              <div className={style.sortButton}>
+                <Button
+                variant="text"
+                startIcon={<SortIcon />}
+                onClick={toggleSortComments}
+                >
+                SORT BY
+                </Button>
+                {openSortComments ? <SortCommentsMenu toggleMenu={toggleSortComments} openMenu={openSortComments}/> : null}
+              </div>
             </div>
             <Comment />
             <Comment />
